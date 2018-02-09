@@ -54,11 +54,11 @@ class UsersController extends Controller
                     return response()->json($user,200);
                 }
                 else{
-                    return response()->json(['error' => 'No content'],406);
+                    return response()->json(['error' => 'No content data'],406);
                 }
 
             }catch(ModelNotFoundException $e){
-                return response()->json(['error' => 'No content'],406);
+                return response()->json(['error' => 'No content error'],406);
             }
 
          }
